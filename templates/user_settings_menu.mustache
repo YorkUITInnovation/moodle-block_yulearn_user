@@ -1,0 +1,40 @@
+<div class="d-flex">
+    <div class="mr-auto"></div>
+    <div class="action-menu moodle-actionmenu d-inline" id="action-menu-2" data-enhance="moodle-core-actionmenu">
+        <div class="menubar d-flex " id="action-menu-2-menubar" role="menubar">
+            <div class="action-menu-trigger">
+                <div class="dropdown">
+                    <a href="#" tabindex="0" class=" dropdown-toggle icon-no-margin" id="dropdown-2" aria-label="Actions menu" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" aria-controls="action-menu-2-menu">
+                        <i class="icon fa slicon-settings fa-fw "  title="Actions menu" aria-label="Actions menu"></i>                                
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right menu align-tr-br" id="action-menu-2-menu" data-rel="menu-content" aria-labelledby="action-menu-toggle-2" role="menu" data-align="tr-br" id="dropdown-menu-2">
+                        <div class="dropdown-item">
+                            <a href="{{{config.wwwroot}}}/user/edit.php?id={{{userId}}}" class=""  role="menuitem" ><i class="icon fa slicon-options fa-fw "   ></i>{{#str}}editmyprofile{{/str}}</a>
+                        </div>
+<!--                        <div class="dropdown-item">-->
+<!--                            <a href="{{{config.wwwroot}}}/login/change_password.php?id=1" id="action_link5db58c8b52e7716" class=""  role="menuitem" ><i class="icon fa slicon-options fa-fw "   ></i>{{#str}}changepassword{{/str}}</a>-->
+<!--                        </div>-->
+                        <div class="dropdown-item">
+                            <a href="{{{config.wwwroot}}}/user/language.php?id={{{userId}}}&course=1" id="action_link5db58c8b52e7717" class=""  role="menuitem" ><i class="icon fa slicon-options fa-fw "   ></i>{{#str}}preferredlanguage{{/str}}</a>
+                        </div>
+                        <div class="dropdown-item">
+                            <a href="{{{config.wwwroot}}}/user/forum.php?id={{{userId}}}&course=1" id="action_link5db58c8b52e7718" class=""  role="menuitem" ><i class="icon fa slicon-options fa-fw "   ></i>{{#str}}forumpreferences{{/str}}</a>
+                        </div>
+                        <div class="dropdown-item">
+                            <a href="{{{config.wwwroot}}}/user/editor.php?id={{{userId}}}&course=1" id="action_link5db58c8b52e7719" class=""  role="menuitem" ><i class="icon fa slicon-options fa-fw "   ></i>{{#str}}editorpreferences{{/str}}</a>
+                        </div>
+                        <div class="dropdown-item">
+                            <a href="{{{config.wwwroot}}}/user/calendar.php?id={{{userId}}}" id="action_link5db58c8b52e7721" class=""  role="menuitem" ><i class="icon fa slicon-options fa-fw "   ></i>{{#str}}calendarpreferences, core_calendar{{/str}}</a>
+                        </div>
+                        <div class="dropdown-item">
+                            <a href="{{{config.wwwroot}}}/message/edit.php?id={{{userId}}}" id="action_link5db58c8b52e7722" class=""  role="menuitem" ><i class="icon fa slicon-options fa-fw "   ></i>{{#str}}messagepreferences, core_message{{/str}}</a>
+                        </div>
+                        <div class="dropdown-item">
+                            <a href="{{{config.wwwroot}}}/message/notificationpreferences.php?userid={{{userId}}}" id="action_link5db58c8b52e7723" class=""  role="menuitem" ><i class="icon fa slicon-options fa-fw "   ></i>{{#str}}notificationpreferences, core_message{{/str}}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
