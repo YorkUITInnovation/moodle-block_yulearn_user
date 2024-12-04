@@ -25,6 +25,30 @@ class user_info implements \renderable, \templatable
 
         if (isset($_COOKIE['yulearn_user_info'])) {
             $data = json_decode($_COOKIE['yulearn_user_info']);
+
+            if ($USER->id != $data->userId) {
+                $YULEARNUSER = new \local_yulearn\YULearnUser();
+                $user = $DB->get_record('user', ['id' => $USER->id]);
+                $userDetails = $YULEARNUSER->getUserDetails($user);
+
+                $params = [];
+
+                $department = '';
+                foreach ($userDetails['employee'] as $key => $e) {
+                    $department .= $e['department'] . '<br> <strong>' . $e['position'] . '</strong> <hr>'; // Space required after strong for rtrim to work
+                }
+
+                $data = [
+                    'wwwroot' => $CFG->wwwroot,
+                    'userId' => $userDetails['id'],
+                    'userImage' => $userDetails['profileimageurl'],
+                    'fullName' => $userDetails['fullname'],
+                    'department' => rtrim($department, '<hr>'),
+                ];
+
+            } else {
+                $data = json_decode($_COOKIE['yulearn_user_info']);
+            }
             return $data;
         } else {
             $YULEARNUSER = new \local_yulearn\YULearnUser();
